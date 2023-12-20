@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Ingenieurie&mdash;Informatique {% endblock %}
+
+{% block content %}
+
+
+    <div class="custom-breadcrumns border-bottom">
+      <div class="container">
+        <a href="{% url 'index' %}">Acceuil</a>
+        <span class="mx-3 icon-keyboard_arrow_right"></span>
+        <span class="current">Contact</span>
+      </div>
+    </div>
+
+    <div class="site-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="fname">Prenom</label>
+                    <input type="text" id="fname" class="form-control form-control-lg">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="lname">Nom</label>
+                    <input type="text" id="lname" class="form-control form-control-lg">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="eaddress">Address Email</label>
+                    <input type="text" id="eaddress" class="form-control form-control-lg">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="tel">Tel. Numero</label>
+                    <input type="text" id="tel" class="form-control form-control-lg">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <label for="message">Message</label>
+                    <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <input type="submit" value="Send Message" class="btn btn-primary btn-lg px-5">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-bg style-1" style="background-image: url('{% static 'face/images/hero_1.jpg' %}');">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+              <span class="icon flaticon-mortarboard"></span>
+              <h3>Notre Philosophie</h3>
+              <p>Transmettre et faire acquérir des connaissances, préparer à la vie professionnelle, 
+                éduquer les futurs adultes à être citoyens et à vivre ensemble, viser l'égalité entre 
+                élèves dans la réussite éducative est la philosophie de la L2I.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+              <span class="icon flaticon-school-material"></span>
+              <h3>Principe académique</h3>
+              <p>« l'homme est présenté d'emblée comme un certain être qui, 
+                à la différence des autres animaux, serait doué d'une faculté 
+                qui lui assure un certain rayonnement, la faculté de raisonner ».
+                Nous allons booster le raisonnement dans la L2I.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+              <span class="icon flaticon-library"></span>
+              <h3>Clé du succès</h3>
+              <p>L'éducation est la clé du succès car elle ouvre des portes 
+                aux personnes de tous les horizons et élargit l'esprit humain
+                avec la connaissance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+  {% endblock %}

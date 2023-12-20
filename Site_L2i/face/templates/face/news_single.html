@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Ingenieurie&mdash;Informatique {% endblock %}
+
+{% block content %}
+
+    <div class="custom-breadcrumns border-bottom">
+      <div class="container">
+        <a href="{% url 'index' %}">Acceuil</a>
+        <span class="mx-3 icon-keyboard_arrow_right"></span>
+        <span class="current">News</span>
+      </div>
+    </div>
+
+    <div class="site-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-9 mb-4">
+                    <p class="mb-5">
+                        <img src="{% static 'face/images/course_15.jpg'%}" alt="Image" class="img-fluid">
+                    </p>
+                    <p>Université Assane-Seck de Ziguinchor</p>
+                    <p>Dans le but d'élargir sa carte universitaire et de désengorger les universités publiques existantes (notamment l'université Cheikh-Anta-Diop de Dakar), les autorités sénégalaises ont décidé, depuis le début des années 2000, d'ouvrir de nouveaux établissements d'enseignement supérieur.
+                    Initialement prévu pour être un Centre universitaire régional (CUR), le projet d'implantation d'un établissement à Ziguinchor s'est transformé en la création d'une université complète à la suite d'une décision du président Abdoulaye Wade.
+                    C'est ainsi que l'université de Ziguinchor a été pédagogiquement ouverte au cours du mois de février 2007. En 2013, l'établissement a été renommé en hommage à Assane Seck, un universitaire et homme politique sénégalais.</p>
+                    <p>
+                    Organisation
+                    L'UASZ est composée de quatre unités de formation et de recherche4, de deux écoles doctorales4 et de plusieurs laboratoires de recherche :
+
+                    UFR
+                    UFR des sciences économiques et sociales (SES)
+                    UFR des sciences et technologies (ST)
+                    UFR des lettres, arts et sciences humaines (LASHu)
+                    UFR des sciences de la santé (2S)
+
+                    École doctorale
+                    École doctorale Sciences, Technologies et Ingénierie (ED-STI)
+                    École doctorale Espaces, Sociétés et Humanités (ED-ESH)
+
+                    Laboratoires de recherche
+                    Laboratoire de géographie et environnement (LGE)
+                    Laboratoire de chimie et physique des matériaux (LCPM)
+                    Laboratoire de mathématiques et applications (LMA)
+                    Laboratoire d'océanographie, des sciences de l'environnement et du climat (LOSEC)
+                    Laboratoire d'agroforesterie et d'écologie (LAFE)
+                    Laboratoire de géographie et d'environnement (LGE)</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="section-bg style-1" style="background-image: url('{% static 'face/images/hero_1.jpg' %}');">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+              <span class="icon flaticon-mortarboard"></span>
+              <h3>Notre Philosophie</h3>
+              <p>Transmettre et faire acquérir des connaissances, préparer à la vie professionnelle, 
+                éduquer les futurs adultes à être citoyens et à vivre ensemble, viser l'égalité entre 
+                élèves dans la réussite éducative est la philosophie de la L2I.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+              <span class="icon flaticon-school-material"></span>
+              <h3>Principe académique</h3>
+              <p>« l'homme est présenté d'emblée comme un certain être qui, 
+                à la différence des autres animaux, serait doué d'une faculté 
+                qui lui assure un certain rayonnement, la faculté de raisonner ».
+                Nous allons booster le raisonnement dans la L2I.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+              <span class="icon flaticon-library"></span>
+              <h3>Clé du succès</h3>
+              <p>L'éducation est la clé du succès car elle ouvre des portes 
+                aux personnes de tous les horizons et élargit l'esprit humain
+                avec la connaissance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+    
+</body>
+
+</html>
+
+{% endblock %}

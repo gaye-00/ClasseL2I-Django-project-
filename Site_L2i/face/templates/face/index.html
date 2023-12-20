@@ -1,0 +1,256 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Ingenieurie&mdash;Informatique {% endblock %}
+
+{% block content %}
+    <div class="site-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center text-center">
+          <div class="col-lg-4 mb-5">
+            <h2 class="section-title-underline mb-5">
+              <span>Pourquoi L' Ingénierie Informatique</span>
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+
+            <div class="feature-1 border">
+              <div class="icon-wrapper bg-primary">
+                <span class="flaticon-mortarboard text-white"></span>
+              </div>
+              <div class="feature-1-content">
+                <h2>Personnalisez l'apprentissage</h2>
+                <p>pour obtenir rapidement les competences qu'il faut </p>
+                <!-- <p><a href="#" class="btn btn-primary px-4 rounded-0">Learn More</a></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <div class="feature-1 border">
+              <div class="icon-wrapper bg-primary">
+                <span class="flaticon-school-material text-white"></span>
+              </div>
+              <div class="feature-1-content">
+                <h2>Cours de confiance</h2>
+                <p>dispensé par une equipe qui est la creme de la creme</p>
+                <!-- <p><a href="#" class="btn btn-primary px-4 rounded-0">Learn More</a></p> -->
+              </div>
+            </div> 
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+            <div class="feature-1 border">
+              <div class="icon-wrapper bg-primary">
+                <span class="flaticon-library text-white"></span>
+              </div>
+              <div class="feature-1-content">
+                <h2>Outils pour les étudiants</h2>
+                <p>pour developper tout de suite leurs carrieres </p>
+                <!-- <p><a href="#" class="btn btn-primary px-4 rounded-0">Learn More</a></p> -->
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section">
+      <div class="container">
+
+
+        <div class="row mb-5 justify-content-center text-center">
+          <div class="col-lg-6 mb-5">
+            <h2 class="section-title-underline mb-3">
+              <span>Cours populaires</span>
+            </h2>
+            <p>Les cours populaires sont listés ici pour une recherche plus efficace .</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+              <div class="owl-slide-3 owl-carousel">
+                {% for cours in listCours %}
+                  <div class="course-1-item">
+                    <figure class="thumnail">
+                      <a href="{% url 'about' %} "><img src="{% static 'face/images/course_1.jpg' %}" alt="Image" class="img-fluid"></a>
+                      
+                      <div class="category"><h3>{{cours.matiere}} <br>
+                        Pr {{cours.auteur}}</h3></div>  
+                    </figure>
+                    <div class="course-1-content pb-4">
+                      <h2>{{cours.titre}}</h2>
+                      <div class="rating text-center mb-3">
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                        <span class="icon-star2 text-warning"></span>
+                      </div>
+                      <p class="desc mb-4">{{cours.desc|truncatewords:8}}..</p>
+                      <p><a href="{%url 'course_single' cours.id %}" class="btn btn-primary rounded-0 px-4">Commencer tout de suite</a></p>
+                    </div>
+                  </div>
+                {% endfor %}      
+              </div>
+          <!-- Fin de la boucle -->
+      
+          </div>
+        </div>
+
+        
+        
+      </div>
+    </div>
+
+    
+
+
+    <div class="section-bg style-1" style="background-image: url('{% static 'face/images/hero_1.jpg' %}'); ">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h2 class="section-title-underline style-2">
+              <span>À propos de notre université</span>
+            </h2>
+          </div>
+          <div class="col-lg-8">
+            <p class="lead">L'université Assane-Seck de Ziguinchor (UASZ) est un établissement public d'enseignement supérieur situé à Ziguinchor dans la région nature de la Casamance, au sud-ouest du Sénégal.</p>
+            <p>Dans le but d'élargir sa carte universitaire et de désengorger les universités publiques existantes (notamment l'université Cheikh-Anta-Diop de Dakar), les autorités sénégalaises ont décidé, depuis le début des années 2000, d'ouvrir de nouveaux établissements d'enseignement supérieur.
+            Initialement prévu pour être un Centre universitaire régional (CUR), le projet d'implantation d'un établissement à Ziguinchor s'est transformé en la création d'une université complète à la suite d'une décision du président Abdoulaye Wade.
+            C'est ainsi que l'université de Ziguinchor a été pédagogiquement ouverte au cours du mois de février 2007. En 2013, l'établissement a été renommé en hommage à Assane Seck, un universitaire et homme politique sénégalais.</p>
+            <p><a href="{% url 'news_single' %}">En Savoir plus</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- // 05 - Block -->
+  <div class="site-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-4">
+            <h2 class="section-title-underline">
+              <span>Témoignages</span>
+            </h2>
+          </div>
+        </div>
+
+
+        <div class="owl-slide owl-carousel">
+
+          <div class="ftco-testimonial-1">
+            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
+              <img src="{% static 'face/images/download.png' %}" alt="Image" class="img-fluid mr-3">
+              <div>
+                <h3>Daouda CISSE</h3>
+                <span>Etudiant</span>
+              </div>
+            </div>
+            <div>
+              <p>&ldquo;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, mollitia. Possimus mollitia nobis libero quidem aut tempore dolore iure maiores, perferendis, provident numquam illum nisi amet necessitatibus. A, provident aperiam!&rdquo;</p>
+            </div>
+          </div>
+
+          <div class="ftco-testimonial-1">
+            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
+              <img src="{% static 'face/images/download.png' %}" alt="Image" class="img-fluid mr-3">
+              <div>
+                <h3>Mouhamed A. NDIAYE</h3>
+                <span>Etudiant</span>
+              </div>
+            </div>
+            <div>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, mollitia. Possimus mollitia nobis libero quidem aut tempore dolore iure maiores, perferendis, provident numquam illum nisi amet necessitatibus. A, provident aperiam!</p>
+            </div>
+          </div>
+
+          <div class="ftco-testimonial-1">
+            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
+              <img src="{% static 'face/images/download.png' %}" alt="Image" class="img-fluid mr-3">
+              <div>
+                <h3>Abdoulaye GAYE</h3>
+                <span>Etudiant</span>
+              </div>
+            </div>
+            <div>
+              <p>&ldquo;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, mollitia. Possimus mollitia nobis libero quidem aut tempore dolore iure maiores, perferendis, provident numquam illum nisi amet necessitatibus. A, provident aperiam!&rdquo;</p>
+            </div>
+          </div>
+
+          <div class="ftco-testimonial-1">
+            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
+              <img src="{% static 'face/images/download.png' %}" alt="Image" class="img-fluid mr-3">
+              <div>
+                <h3>Abdourahmane DIALLO</h3>
+                <span>Etudiant</span>
+              </div>
+            </div>
+            <div>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, mollitia. Possimus mollitia nobis libero quidem aut tempore dolore iure maiores, perferendis, provident numquam illum nisi amet necessitatibus. A, provident aperiam!</p>
+            </div>
+          </div>
+
+          <div class="ftco-testimonial-1">
+            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
+              <img src="{% static 'face/images/download.png' %}" alt="Image" class="img-fluid mr-3">
+              <div>
+                <h3>Aminata DIALLO</h3>
+                <span>Etudiante</span>
+              </div>
+            </div>
+            <div>
+              <p>&ldquo;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, mollitia. Possimus mollitia nobis libero quidem aut tempore dolore iure maiores, perferendis, provident numquam illum nisi amet necessitatibus. A, provident aperiam!&rdquo;</p>
+            </div>
+          </div>
+
+          <div class="ftco-testimonial-1">
+            <div class="ftco-testimonial-vcard d-flex align-items-center mb-4">
+              <img src="{% static 'face/images/download.png' %}" alt="Image" class="img-fluid mr-3">
+              <div>
+                <h3>Aliou SADIO</h3>
+                <span>Etudiant</span>
+              </div>
+            </div>
+            <div>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, mollitia. Possimus mollitia nobis libero quidem aut tempore dolore iure maiores, perferendis, provident numquam illum nisi amet necessitatibus. A, provident aperiam!</p>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+    
+
+    <div class="section-bg style-1" style="background-image: url('{% static 'face/images/hero_1.jpg' %}');">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+            <span class="icon flaticon-mortarboard"></span>
+            <h3>Notre Philosophie</h3>
+            <p>Transmettre et faire acquérir des connaissances, préparer à la vie professionnelle, 
+              éduquer les futurs adultes à être citoyens et à vivre ensemble, viser l'égalité entre 
+              élèves dans la réussite éducative est la philosophie de la L2I.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+            <span class="icon flaticon-school-material"></span>
+            <h3>Principe académique</h3>
+            <p>« l'homme est présenté d'emblée comme un certain être qui, 
+              à la différence des autres animaux, serait doué d'une faculté 
+              qui lui assure un certain rayonnement, la faculté de raisonner ».
+              Nous allons booster le raisonnement dans la L2I.</p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
+            <span class="icon flaticon-library"></span>
+            <h3>Clé du succès</h3>
+            <p>L'éducation est la clé du succès car elle ouvre des portes 
+              aux personnes de tous les horizons et élargit l'esprit humain
+              avec la connaissance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+{% endblock %}
